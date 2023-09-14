@@ -1,11 +1,3 @@
-# 数据库初始化
-# @author <a href="https://github.com/liyupi">程序员鱼皮</a>
-# @from <a href="https://yupi.icu">编程导航知识星球</a>
-create
-database if not exists yupao;
-
-use
-yupao;
 
 -- 用户表
 create table user
@@ -24,7 +16,7 @@ create table user
     updateTime   datetime default CURRENT_TIMESTAMP null on update CURRENT_TIMESTAMP,
     isDelete     tinyint  default 0 not null comment '是否删除',
     userRole     int      default 0 not null comment '用户角色 0 - 普通用户 1 - 管理员',
-    planetCode   varchar(512) null comment '星球编号',
+    idCode   varchar(512) null comment '用户编号',
     tags         varchar(1024) null comment '标签 json 列表'
 ) comment '用户';
 
